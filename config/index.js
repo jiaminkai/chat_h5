@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': { //代理标识
+        target: 'http://121.40.102.191:9999/',//指向的实际地址
+        changeOrigin: true, // 允许跨域
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -72,5 +80,10 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
+  },
+  configureWebpack: {
+    externals: {
+      'AMap': 'AMap' //高德地图配置
+    }
   }
 }

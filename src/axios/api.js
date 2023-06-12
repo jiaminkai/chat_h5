@@ -1,3 +1,3 @@
 export default {
-  all_addr: 'addr/v1/all_addr'
+  all_addr: '/api/userInfo/create'
 }
