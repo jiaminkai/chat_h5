@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import dayjs from 'dayjs'
 import Emoji from '@/components/emoji/emoji.vue'
 export default {

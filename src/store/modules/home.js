@@ -24,7 +24,7 @@ const message = {
         pageNum: 1,
         pageSize: 40
       })
-    },
+    }
   },
   actions: {
     // 赋值数据
@@ -33,7 +33,7 @@ const message = {
     },
     initMessageList({ commit, dispatch }, val) {
       commit('initInfo')
-    },
+    }
   },
   getters: {
     message: state => state.messageList

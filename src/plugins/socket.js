@@ -4,7 +4,7 @@ Vue.use(Toast)
 // let v = new Vue()
 var webSocket = null
 var isConnect = false // 连接状态
-var globalCallback = function (e) {  }// 定义外部接收数据的回调函数
+var globalCallback = function (e) {}// 定义外部接收数据的回调函数
 var reConnectNum = 0// 重连次数
 
 var websocketUrl = 'ws://121.40.102.191:9999/ws'
